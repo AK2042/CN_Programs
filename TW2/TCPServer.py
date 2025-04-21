@@ -2,14 +2,14 @@ import socket
 import os
 
 def start_server():
-    host = "127.0.0.1"
-    port = 8000
+    host = "10.30.15.248"
+    port = 12350
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
 
-    server_socket.listen(1)
-    print("Server is listening")
+    server.listen(1)
+    print("Server started. Waiting for connections...")
 
     while True:
         conn,addr=server_socket.accept()
